@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Site de Veterinária</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Botão para abrir a sidebar -->
+        <button id="sidebarToggle">☰</button>
+
+        <!-- Logo do site -->
+        <div class="logo">
+          <a href="INICIAL.html">
+            <img src="logo.png" alt="Logotipo"> </a>
+            <h1>Veterinária XYZ</h1>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button onclick="search()">🔍</button>
+        </div>
+
+        <!-- Botão do carrinho com contador de itens -->
+        <div class="cart">
+            <a href="carrinho.html">
+                <button id="cartButton">
+                    <img src="FOTOS/carrinho.png" alt="Carrinho" />
+                    <span id="itemCount">0</span>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar com menu e área de criação de perfil -->
+    <div class="sidebar">
+        <!-- Formulário para criação de perfil -->
+        <div class="create-profile">
+            <h2>Criar Perfil</h2>
+            <form>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal do carrinho -->
+    <main>
+        <h2>Seu Carrinho</h2>
+        <section class="cart-items" id="cartItems">
+            <!-- Itens serão adicionados dinamicamente via JavaScript -->
+        </section>
+
+        <section class="cart-summary">
+            <h3>Resumo da Compra</h3>
+            <div>
+                <span>Subtotal:</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+            <div>
+                <span>Taxa de Entrega:</span>
+                <span id="deliveryFee">R$ 10,00</span>
+            </div>
+            <div>
+                <span>Desconto:</span>
+                <span id="discount">R$ 5,00</span>
+            </div>
+            <div>
+                <span>Total:</span>
+                <span id="total">R$ 5,00</span>
+            </div>
+            <button id="checkoutButton" onclick="showPaymentInstructions()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Veterinária XYZ. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="cart.js"></script>
+</body>
+</html>
